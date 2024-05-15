@@ -1,0 +1,42 @@
+:root {
+    --bg: #0d0c22;
+    --bgSoft: #2d2b42;
+    --text: white;
+    --textSoft: #e5e5e5;
+    --btn: #3673fd;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+  
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto; 
+    padding: 20px; 
+    box-sizing: border-box; 
+    justify-content: space-between;
+}
+
+table {
+    width: 100%; 
+    margin-top: 20px;
+}
+
+h2 {
+    margin-bottom: 10px; 
+}
