@@ -48,20 +48,16 @@ const LoginForm = ({ onLogin }) => {
 };
 
 const Login = () => {
-  const [showLoginForm, setShowLoginForm] = useState(true); // Initially true to show the login form
+  const [showLoginForm, setShowLoginForm] = useState(true); 
 
   const handleLogin = (userDetails) => {
-    // Perform any additional login logic here
     console.log('Logging in with:', userDetails);
-    // Close the login form after successful login
     setShowLoginForm(false);
   };
 
   useEffect(() => {
-    // Perform any necessary actions when navigating to the login page
-    // For example, check if the user is already logged in
-    // and redirect them to another page if necessary
-  }, []); // Empty dependency array ensures this effect runs only once, similar to componentDidMount
+    
+  }, []);
 
   return (
     <div>

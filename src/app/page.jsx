@@ -1,9 +1,11 @@
+import Image from 'next/image';
+
 const Home = () => {
   return (
     <div>
       <h1>Shri Vishnu Engineering College For Women !!</h1>
       <br></br>
-      <img src="campus.jpg" alt="College Image" style={{ width: '1000px', height: '500px' }} />
+      <Image src="/campus.jpg" alt="College Image" width={1000} height={500} />
       
       <br></br>
       <br></br>

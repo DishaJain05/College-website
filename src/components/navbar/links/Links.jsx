@@ -1,4 +1,3 @@
-// Links.jsx
 import Link from "next/link";
 import styles from "./links.module.css";
 
