@@ -9,7 +9,18 @@ const AboutPage = () => {
             <p style={{ textAlign: 'center' }}>
                 Established in 2001, Shri Vishnu Engineering College for Women (SVECW) is located in Bhimavaram, Andhra Pradesh. Approved by the All India Council for Technical Education (AICTE) and affiliated with Jawaharlal Nehru Technological University Kakinada (JNTUK), the college offers undergraduate and postgraduate courses in various streams of Engineering, Information Technology, and Business Management. SVECW is accredited by the National Board of Accreditation (NBA).
             </p>
-            {/* Additional information about the college can be added here */}
+            <br></br>
+            <h2>Vision & Mission</h2>
+            <h4>
+Vision: <br></br>
+To empower the students through Academic excellence and Ethics so as to bring about social transformation and prosperity.<br></br>
+
+Mission:<br></br>
+To expand the frontiers of knowledge through quality education.
+ To provide value added Research and development.
+To embody a spirit of excellence in Teaching, Creativity, Entrepreneurship and Outreach.
+ To provide a platform for synergy of Academy, Industry and Community.
+ To inculcate high standards of Ethical and Professional behavior.</h4>
             <br></br><p> --Few Questions--</p><br></br>
             Q:  
 Which is the top course of Shri Vishnu Engineering College for Women?

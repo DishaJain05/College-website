@@ -8,6 +8,8 @@ const Links = () => {
         { title: "About", path: "/about" },
         { title: "Contact", path: "/contact" },
         { title: "Departments", path: "/departments", sublinks: ["CSE", "IT", "ECE"] },
+        { title: "Branches", path: "/branches" }, 
+        { title: "Login", path: "/login" }, 
     ];
 
     return (

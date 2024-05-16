@@ -1,14 +1,16 @@
+import React from 'react';
+
 const ContactPage = () => {
     return (
-        <div className="container">
-            <h2 style={{ marginBottom: '10px' }}>Contact Us</h2>
-            <br></br>
-            <br></br>
-            <h2>SVECW-Shri Vishnu Engineering College for Women
-Jawaharlal Nehru Technological University
-West Godavari, Andhra Pradesh, India   </h2>
-<br></br>
-            <h3><table>
+        <div className="container2">
+            <h2>Contact Us</h2>
+            <div className="contact-info">
+                <h3>SVECW-Shri Vishnu Engineering College for Women</h3>
+                <br></br>
+                <p>Jawaharlal Nehru Technological University</p><br></br>
+                <p>West Godavari, Andhra Pradesh, India</p>
+            </div>
+            <table>
                 <tbody>
                     <tr>
                         <td>Admission Cell</td>
@@ -16,8 +18,6 @@ West Godavari, Andhra Pradesh, India   </h2>
                         <td>Contact Number: 9949433588</td>
                         <td>Email: surya_dasika@yahoo.com</td>
                     </tr>
-                    <br></br>
-                    <br></br>
                     <tr>
                         <td>Placement Cell</td>
                         <td>Contact Person: Dr. P. Srinivasa Raju</td>
@@ -26,7 +26,8 @@ West Godavari, Andhra Pradesh, India   </h2>
                     </tr>
                 </tbody>
             </table>
-            </h3>
+            <br></br>
+            <br></br>
         </div>
     );
 };

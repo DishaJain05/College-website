@@ -1,5 +1,4 @@
 
-
 const departmentpage = () => {
     return (
         <div>
