@@ -9,6 +9,8 @@ const Links = () => {
         { title: "Departments", path: "/departments", sublinks: ["CSE", "IT", "ECE"] },
         { title: "Branches", path: "/branches" }, 
         { title: "Login", path: "/login" }, 
+        { title: "Signup", path: "/signup" },
+        {title: "students",path: "/students"},
     ];
 
     return (

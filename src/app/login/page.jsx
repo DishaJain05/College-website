@@ -1,12 +1,13 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const LoginForm = ({ onLogin }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!username.trim()) {
       setError('Please enter a username');
@@ -18,7 +19,14 @@ const LoginForm = ({ onLogin }) => {
     }
     const userDetails = { username, password };
     console.log('User details:', userDetails);
-    onLogin(userDetails); 
+
+    try {
+      const response = await axios.get('https://jsonplaceholder.typicode.com/users'); // Fetch list of users
+      onLogin(response.data);
+    } catch (err) {
+      console.error('Error fetching user data:', err);
+      setError('Failed to fetch user data');
+    }
   };
 
   return (
@@ -47,21 +55,38 @@ const LoginForm = ({ onLogin }) => {
   );
 };
 
+const UserCard = ({ user }) => {
+  return (
+    <div className="user-card">
+      <div classname="user-grid">
+      <h2>{user.name}</h2>
+      <p>Email: {user.email}</p>
+      <p>Address: {`${user.address.street}, ${user.address.city}`}</p>
+      <p>Phone: {user.phone}</p>
+      </div>
+    </div>
+  );
+};
+
 const Login = () => {
-  const [showLoginForm, setShowLoginForm] = useState(true); 
+  const [userDetails, setUserDetails] = useState([]);
 
-  const handleLogin = (userDetails) => {
-    console.log('Logging in with:', userDetails);
-    setShowLoginForm(false);
+  const handleLogin = (users) => {
+    console.log('Logged in with:', users);
+    setUserDetails(users);
   };
-
-  useEffect(() => {
-    
-  }, []);
 
   return (
     <div>
-      {showLoginForm && <LoginForm onLogin={handleLogin} />}
+      {!userDetails.length ? (
+        <LoginForm onLogin={handleLogin} />
+      ) : (
+        <div className="user-grid">
+          {userDetails.slice(0, 25).map((user) => (
+            <UserCard key={user.id} user={user} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };
